@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+html,
+body{
+  color: black;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  /* background: url(./background.jpg) center / cover; */
+  background: url(./buildings.jpeg) center / cover;
+}
+a{
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+}
+
+.fill-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(231, 129, 92);
+  opacity: 0.5;
+  background-size: cover;
+
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0px 10px;
+}
+.calculator{
+  padding-top: 50px;
+}
+.form-wrapper{
+  display: flex;
+  max-height: 650px;
+  width: 100%;
+}
+.form{
+  padding: 30px;
+  border-radius: 22px;
+  background-color: rgba(240, 248, 255, 0.641);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.order1{
+  margin-right: 32px;
+}
+.form__item {
+  margin-bottom: 40px;
+}
+.heading {
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #222;
+}
+.switchers {
+  display: flex;
+}
+.switcher__item {
+}
+.switcher__item input{
+  display: none;
+}
+.switcher__item label{
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 230, 0);
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+.switcher__item:hover label{
+  background-color: rgba(231, 240, 101, 0.716);
+}
+.switcher__item label:not(:first-child){
+  margin-left: -2px;
+}
+.switcher__item input:checked + label{
+  background-color: rgb(204, 156, 241);
+}
+.tariff {
+}
+.roller {
+  padding: 20px 30px;
+  background-color: rgba(123, 120, 120, 0.625);
+  box-shadow: 1px 4px 16px rgb(50, 50, 50, 0.5);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.time {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background-color: beige;
+  border-radius: 20px;
+  outline: none;
+  margin-right: 22px;
+}
+#volume{
+  font-size: 28px;
+  color: rgb(57, 52, 52);
+}
+#time::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(255, 230, 0);
+  box-shadow: 1px 4px 8px 10px rgb(34, 60, 80), 0.5;
+  cursor: pointer;
+
+}
+.options {
+}
+.option__item {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  position: relative;
+}
+.option{
+  display: none;
+}
+.option:checked + .checkmark::after{
+  transform: scale(1);
+}
+.option:checked + .checkmark::before{
+  background-color: rgba(214, 238, 144, 0.59);
+}
+.option__item .checkmark{
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+}
+.option__item .checkmark::before{
+  content: '';
+  background-color: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  margin-right: 32px;
+  align-self: flex-start;
+  border-radius: 6px;
+  font-size: 30px;
+  flex: 0 0 30px;
+}
+.option__item .checkmark::after{
+  transition: all 0.5s ease-in-out 0s;
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+  background-color: rgb(37 197 172);
+  box-shadow: 1px 4px 16px rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+}
+.option {
+}
+
+.order2{
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+.parameters {
+
+}
+.parametr {
+  margin-bottom: 20px;
+}
+.parametr output{
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.total {
+  font-size: 36px;
+}
+.total::after {
+  content: "\20BD";
+}
+
